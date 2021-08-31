@@ -7,5 +7,7 @@ regexcp.js
 node_modules/
 extra/
 src/poppler
-upload/
-pdfimg/
+upload/*.pdf
+.png
+pdfimg/*
+

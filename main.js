@@ -24,7 +24,7 @@ exports.extract = async function (filename,delpdf,noregex) {
             fs.mkdirSync('./pdfimg/'+pdftoimg, { recursive: true });
         }
         // extrai imagens do pdf
-        var pr =  await poppler.pdf2image(__dirname+'\\upload\\'+filename,__dirname+'\\pdfimg\\'+ pdftoimg+'\\'+pdftoimg);
+         var pr = await poppler.pdf2image(__dirname+'/upload/'+filename,__dirname+'/pdfimg/'+ pdftoimg+'/'+pdftoimg);
         //var pr = await poppler.pdf2image('upload/'+filename, 'pdfimg/'+ pdftoimg+'/'+pdftoimg);
         console.log('Extraindo Imagens'+(await pr).toString);
 
