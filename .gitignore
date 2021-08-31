@@ -6,5 +6,5 @@ extra/
 src/poppler
 upload/*.pdf
 .png
-pdfimg/*
+pdfimg/*.png
 
