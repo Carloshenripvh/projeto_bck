@@ -2,8 +2,11 @@
 
 Como fazer funcionar ?
 
-    npm install
+Para Instalar Depedencias
     
+    npm install
+-
+
     node server.js
 
 requer variaveis locais .env
