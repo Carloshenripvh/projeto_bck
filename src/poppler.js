@@ -2,8 +2,6 @@ const { Poppler } = require("node-poppler");
 const poppler = new Poppler("/usr/bin");
 
 
-//const poppler = new Poppler();
-
 //const file = 'e.pdf';
 //const outputFile = `test`;
 const options = {
