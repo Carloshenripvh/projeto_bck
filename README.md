@@ -3,6 +3,7 @@
 Como fazer funcionar ?
 
     npm install
+    
     node server.js
 
 requer variaveis locais .env
