@@ -1,6 +1,6 @@
 const { Poppler } = require("node-poppler");
-//const poppler = new Poppler("./poppler/");
-const poppler = new Poppler("C:\\Users\\PaoKenitn\\Documents\\Visual Code\\Projeto-Final\\MulterTest\\src\\poppler\\bin");
+const poppler = new Poppler("/usr/bin");
+
 
 //const poppler = new Poppler();
 
