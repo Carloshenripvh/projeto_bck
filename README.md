@@ -5,7 +5,7 @@ Como fazer funcionar ?
 Para Instalar Depedencias
     
     npm install
--
+Iniciar server
 
     node server.js
 
