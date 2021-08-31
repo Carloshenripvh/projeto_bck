@@ -1,0 +1,11 @@
+.env
+eng.traineddata
+por.traineddata
+por2.traineddata
+package-lock.json
+regexcp.js
+node_modules/
+extra/
+src/poppler
+upload/
+pdfimg/
