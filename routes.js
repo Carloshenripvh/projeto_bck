@@ -18,7 +18,6 @@ routes.get("/posts", async (req, res) => {
 routes.get("/posts/processed", async (req, res) => {
   const livros = await mysql.show();
   const json = JSON.stringify(livros);
-  // const teste = await extrai(livros);
     // const livro_vet = [];
     // const obj = JSON.parse(json, function (key, value) {
     //     if (key == "livro") {
