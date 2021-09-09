@@ -24,7 +24,7 @@ exports.extract = async function (filename,delpdf,noregex) {
             fs.mkdirSync('./pdfimg/'+pdftoimg, { recursive: true });
         }
         // extrai imagens do pdf
-         let pr = await poppler.pdf2image(__dirname+'/upload/'+filename,__dirname+'/pdfimg/'+ pdftoimg+'/'+pdftoimg);
+         let pr = await poppler.pdf2image(__dirname+'/uploads/'+filename,__dirname+'/pdfimg/'+ pdftoimg+'/'+pdftoimg);
         //var pr = await poppler.pdf2image('upload/'+filename, 'pdfimg/'+ pdftoimg+'/'+pdftoimg);
         console.log('Extraindo Imagens'+(await pr).toString);
 
@@ -56,9 +56,11 @@ exports.extract = async function (filename,delpdf,noregex) {
     // 3 - Reconhecimento dos texto de forma Recursiva , Possui (AWAIT)
     // ***** Tesseract *******
     try{
-        for(var i =0; i < pdfvet.length; i++)
+        let texto = [];
+        for(let i =0; i < pdfvet.length; i++){
+            console.log(pdfvet[i]);
             texto = await tesseract.recognize('./pdfimg/'+pdftoimg + '/', pdfvet[i]);
-
+        }
         if(texto.length < 10){
             console.log("Erro na Extracao do texto");
         }else{
@@ -74,7 +76,7 @@ exports.extract = async function (filename,delpdf,noregex) {
                         refbib_vet.forEach(dislay);
                         function dislay(element,index) {
                         console.log("etrc = "+ element +"\n");
-                        // mysql.insert(element);
+                        mysql.insert(element);
                          }
                         console.log("extraido com sucesso winner!!!");
                     }catch(err){

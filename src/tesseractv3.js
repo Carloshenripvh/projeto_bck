@@ -8,16 +8,13 @@ const worker = createWorker(
   }
 );
 
-var out = "";
-
 exports.recognize = async function (dir, file) {
     await worker.load();
     await worker.loadLanguage('por+por2+eng');
     await worker.initialize('por+por2+eng');
-    const { data: { text } } = await worker.recognize(dir +file);
+    let { data: { text } } = await worker.recognize(dir +file);
     // const { data: { text } } = await worker.recognize(dir+'/'+file);
    // console.log(text);
-    out =  text;
 
     await worker.terminate();
     return text;

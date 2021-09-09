@@ -1,0 +1,10 @@
+.env
+package-lock.json
+regexcp.js
+node_modules/
+extra/
+src/poppler
+upload/*.pdf
+.png
+pdfimg/*.png
+

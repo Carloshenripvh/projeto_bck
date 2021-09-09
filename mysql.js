@@ -29,5 +29,14 @@ exports.insert = function(refb) {
     })
 }
 
+exports.show =  async function (req, res){
+    try{
+        const livro = await Postagem.findAll();
+        return livro;
+    }catch(err){
+        res.status(400).json({error: err.message});
+    }
+}
+
 Postagem.sync()
 

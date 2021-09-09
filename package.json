@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon src/index.js",
+    "startf": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,17 +18,24 @@
   },
   "homepage": "https://github.com/Daniel9D/projeto_bck#readme",
   "dependencies": {
+    "aws-sdk": "^2.390.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
+    "excel4node": "^1.7.2",
     "express": "^4.17.1",
+    "mongoose": "^5.6.13",
+    "morgan": "^1.9.1",
     "multer": "^1.4.3",
+    "multer-s3": "^2.9.0",
     "mysql2": "^2.3.0",
     "node-poppler": "^4.1.2",
-    "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
     "tesseract.js": "^2.1.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.12"
+  },
   "description": "Como fazer funcionar ?",
   "keywords": []
 }
